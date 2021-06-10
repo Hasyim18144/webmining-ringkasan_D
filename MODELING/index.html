@@ -1,0 +1,619 @@
+
+<!doctype html>
+<html lang="id" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <meta name="author" content="Hasyim">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>Modeling - Web Mining</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#e92063">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="pink" data-md-color-accent="red">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modeling-pemodelan" class="md-skip">
+          Lewati ke isi
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Web Mining" class="md-header-nav__button md-logo" aria-label="Web Mining">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Web Mining
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Modeling
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cari" placeholder="Cari" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/Hasyim18144/webmining-ringkasan_D/" title="Menuju repositori" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webmining-ringkasan_D
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Web Mining" class="md-nav__button md-logo" aria-label="Web Mining">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Web Mining
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Hasyim18144/webmining-ringkasan_D/" title="Menuju repositori" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webmining-ringkasan_D
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../CRAWLING/" class="md-nav__link">
+      Crawl
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Modeling
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Modeling
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topik-modeling-dengan-python" class="md-nav__link">
+    Topik Modeling dengan Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Topik Modeling dengan Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alokasi-dirichlet-laten-lda" class="md-nav__link">
+    Alokasi Dirichlet Laten (LDA)
+  </a>
+  
+    <nav class="md-nav" aria-label="Alokasi Dirichlet Laten (LDA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lda-untuk-pemodelan-topik-dengan-python" class="md-nav__link">
+    LDA untuk Pemodelan Topik Dengan Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../PREPOCESSING/" class="md-nav__link">
+      Prepocessing
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topik-modeling-dengan-python" class="md-nav__link">
+    Topik Modeling dengan Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Topik Modeling dengan Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alokasi-dirichlet-laten-lda" class="md-nav__link">
+    Alokasi Dirichlet Laten (LDA)
+  </a>
+  
+    <nav class="md-nav" aria-label="Alokasi Dirichlet Laten (LDA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lda-untuk-pemodelan-topik-dengan-python" class="md-nav__link">
+    LDA untuk Pemodelan Topik Dengan Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Hasyim18144/webmining-ringkasan_D/edit/master/docs/MODELING.md" title="Ubah halaman ini" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="modeling-pemodelan">MODELING / PEMODELAN<a class="headerlink" href="#modeling-pemodelan" title="Permanent link">&para;</a></h1>
+<h2 id="topik-modeling-dengan-python"><strong>Topik Modeling dengan Python</strong><a class="headerlink" href="#topik-modeling-dengan-python" title="Permanent link">&para;</a></h2>
+<p>Pemodelan topik adalah teknik tanpa pengawasan yang bermaksud untuk menganalisis data teks dalam jumlah besar dengan mengelompokkan dokumen ke dalam kelompok. Dalam kasus pemodelan topik, data teks tidak memiliki label yang melekat padanya. Sebaliknya, pemodelan topik mencoba mengelompokkan dokumen ke dalam kelompok berdasarkan karakteristik yang sama.</p>
+<p>Dua pendekatan terutama digunakan untuk pemodelan topik : Alokasi Dirichlet Laten dan Faktorisasi Matriks Non-Negatif. Di bagian selanjutnya, kita akan meninjau secara singkat kedua pendekatan ini dan akan melihat bagaimana keduanya dapat diterapkan pada pemodelan topik dengan python.</p>
+<h3 id="alokasi-dirichlet-laten-lda">Alokasi Dirichlet Laten (LDA)<a class="headerlink" href="#alokasi-dirichlet-laten-lda" title="Permanent link">&para;</a></h3>
+<p>LDA didasarkan pada dua asumsi umum :</p>
+<ul>
+<li>Dokumen yang memiliki kata yang mirip biasanya memiliki topik yang sama.</li>
+<li>Dokumen yang memiliki kelompok kata yang sering muncul bersamaan biasanya memiliki topik yang sama.</li>
+</ul>
+<p>Secara matematis, kedua asumsi diatas dapat direpresentasikan sebagai :</p>
+<ul>
+<li>Dokumen adalah distribusi probalitas atas topik laten.</li>
+<li>Topik adalah distribusi probalitas atas kata-kata.</li>
+</ul>
+<h4 id="lda-untuk-pemodelan-topik-dengan-python">LDA untuk Pemodelan Topik Dengan Python<a class="headerlink" href="#lda-untuk-pemodelan-topik-dengan-python" title="Permanent link">&para;</a></h4>
+<p>Kumpulan data berisi ulasan pengguna untuk berbagai produk dalam kategori makanan. kami akan menggunakan LDA untuk mengelompokkan ulasan pengguna ke dalam 5 kategori.</p>
+<p>Langkah pertama, seperti biasa, adalah mengimpor kumpulan data bersama dengan pustaka yang diperlukan. jalankan skrip berikut untuk menjalankan.</p>
+<div class="codehilite"><pre><span></span><code>import pandas as pd
+import numpy as np
+
+reviews_datasets = pd.read_csv(r&#39;E:\Datasets\Reviews.csv&#39;)
+reviews_datasets = reviews_datasets.head(20000)
+reviews_datasets.dropna()
+</code></pre></div>
+
+<p>Selanjutnya, kami mencetak lima baris pertama dari dataset menggunakan <strong>head()</strong> fungsi untuk memeriksa data kami.</p>
+<div class="codehilite"><pre><span></span><code>reviews_datasets.head()
+</code></pre></div>
+
+<p>Pada output, anda akan melihat data berikut:</p>
+<p><img alt="" src="C:\Users\Semprul 93\Pictures\python-nlp-topic-modeling-1.png" /></p>
+<p>Kami akan menerapkan LDA pada kolom "Teks" karena berisi ulasan, kolom lainnya akan diabaikan. Mari kita lihat ulasan nomor 350.</p>
+<div class="codehilite"><pre><span></span><code>reviews_datasets[&#39;Text&#39;][350]
+</code></pre></div>
+
+<p>pada output, Anda akan melihat teks ulasan berikut:</p>
+<div class="codehilite"><pre><span></span><code>&#39;These chocolate covered espresso beans are wonderful!  The chocolate is very dark and rich and the &quot;bean&quot; inside is a very delightful blend of flavors with just enough caffine to really give it a zing.&#39;
+</code></pre></div>
+
+<p>Sebelum kita dapat menerapkan LDA, kita perlu membuat kosakata dari semua kata dalam data lain. Ingat dari atrtikel sebelumnya, kita bisa melakukan denganbantuan vectorizer. perhatikan srip berikut:</p>
+<div class="codehilite"><pre><span></span><code>from sklearn.feature_extraction.text import CountVectorizer
+
+count_vect = CountVectorizer(max_df=0.8, min_df=2, stop_words=&#39;english&#39;)
+doc_term_matrix = count_vect.fit_transform(reviews_datasets[&#39;Text&#39;].values.astype(&#39;U&#39;))
+</code></pre></div>
+
+<p>Dalam skrip di atas kami menggunakan <strong>CountVectorizer</strong> kelas dari <strong>sklearn.feature_extraction.text</strong> modul untuk membuat  matriks istilah dokumen. Sekarang kita lihat matrks istilah dokumen</p>
+<div class="codehilite"><pre><span></span><code>doc_term_matrix
+</code></pre></div>
+
+<p>Kekurangan :</p>
+<div class="codehilite"><pre><span></span><code>&lt;20000x14546 sparse matrix of type &#39;&lt;class &#39;numpy.int64&#39;&gt;&#39;
+with 594703 stored elements in Compressed Sparse Row format&gt;
+</code></pre></div>
+
+<p>Masing-masing dari 20k dokumen di representasikan sebagai vektor dimensi 14546, yang berarti bahwa kosakata kita memiliki 14546 kata.</p>
+<p>selanjutnya, kita akan menggunakan LDA untuk membuat topik bersama dengan distribusi probalitas untuk setiap kata dalam kosakata kita untuk setiap topik. Jalankan skrip berikut :</p>
+<div class="codehilite"><pre><span></span><code>from sklearn.decomposition import LatentDirichletAllocation
+
+LDA = LatentDirichletAllocation(n_components=5, random_state=42)
+LDA.fit(doc_term_matrix)
+</code></pre></div>
+
+<p>skrip berikut secara acak mengambil 10 kata dari kosakata kami:</p>
+<div class="codehilite"><pre><span></span><code>import random
+
+for i in range(10):
+    random_id = random.randint(0,len(count_vect.get_feature_names()))
+    print(count_vect.get_feature_names()[random_id])
+</code></pre></div>
+
+<p>Outputnya terlihat sepeti ini:</p>
+<div class="codehilite"><pre><span></span><code>bribe
+tarragon
+qualifies
+prepare
+hangs
+noted
+churning
+breeds
+zon
+chunkier
+</code></pre></div>
+
+<p>Mari kita cari 10 kata dengan probabilitas tertinggi untuk topik pertama. Untuk mendapatkan topik pertama, Anda dapat menggunakan `components_ atribut dan memberikan indeks 0 sebagai nilai:</p>
+<div class="codehilite"><pre><span></span><code>first_topic = LDA.components_[0]
+</code></pre></div>
+
+<p>Topik pertama berisi probabilitas 14546 kata untuk topik 1. Untuk mengurutkan indeks menurut nilai probabilitas, kita dapat menggunakan `argsort() fungsi. Setelah diurutkan, 10 kata dengan probabilitas tertinggi sekarang akan menjadi 10 indeks terakhir dari array. Skrip berikut mengembalikan indeks dari 10 kata dengan probabilitas tertinggi:</p>
+<div class="codehilite"><pre><span></span><code>top_topic_words = first_topic.argsort()[-10:]
+</code></pre></div>
+
+<p>Keluaran:</p>
+<div class="codehilite"><pre><span></span><code>array([14106,  5892,  7088,  4290, 12596,  5771,  5187, 12888,  7498,
+       12921], dtype=int64)
+</code></pre></div>
+
+<p>Indeks ini kemudian dapat digunakan untuk mengambil nilai kata dari count_vect objek, yang dapat dilakukan seperti ini:</p>
+<div class="codehilite"><pre><span></span><code>for i in top_topic_words:
+    print(count_vect.get_feature_names()[i])
+</code></pre></div>
+
+<p>Dalam output, Anda akan melihat kata-kata berikut:</p>
+<div class="codehilite"><pre><span></span><code>water
+great
+just
+drink
+sugar
+good
+flavor
+taste
+like
+tea
+</code></pre></div>
+
+<p>Kata-kata itu menunjukkan bahwa topik pertama mungkin tentang teh.</p>
+<p>Mari kita cetak 10 kata dengan probabilitas tertinggi untuk kelima topik tersebut:</p>
+<div class="codehilite"><pre><span></span><code>for i,topic in enumerate(LDA.components_):
+    print(f&#39;Top 10 words for topic #{i}:&#39;)
+    print([count_vect.get_feature_names()[i] for i in topic.argsort()[-10:]])
+    print(&#39;\n&#39;)
+</code></pre></div>
+
+<p>Outputnya terlihat:</p>
+<div class="codehilite"><pre><span></span><code>Top 10 words for topic #0:
+[&#39;water&#39;, &#39;great&#39;, &#39;just&#39;, &#39;drink&#39;, &#39;sugar&#39;, &#39;good&#39;, &#39;flavor&#39;, &#39;taste&#39;, &#39;like&#39;, &#39;tea&#39;]
+
+
+Top 10 words for topic #1:
+[&#39;br&#39;, &#39;chips&#39;, &#39;love&#39;, &#39;flavor&#39;, &#39;chocolate&#39;, &#39;just&#39;, &#39;great&#39;, &#39;taste&#39;, &#39;good&#39;, &#39;like&#39;]
+
+
+Top 10 words for topic #2:
+[&#39;just&#39;, &#39;drink&#39;, &#39;orange&#39;, &#39;sugar&#39;, &#39;soda&#39;, &#39;water&#39;, &#39;like&#39;, &#39;juice&#39;, &#39;product&#39;, &#39;br&#39;]
+
+
+Top 10 words for topic #3:
+[&#39;gluten&#39;, &#39;eat&#39;, &#39;free&#39;, &#39;product&#39;, &#39;like&#39;, &#39;dogs&#39;, &#39;treats&#39;, &#39;dog&#39;, &#39;br&#39;, &#39;food&#39;]
+
+
+Top 10 words for topic #4:
+[&#39;cups&#39;, &#39;price&#39;, &#39;great&#39;, &#39;like&#39;, &#39;amazon&#39;, &#39;good&#39;, &#39;br&#39;, &#39;product&#39;, &#39;cup&#39;, &#39;coffee&#39;]
+</code></pre></div>
+
+<p>Output menunjukkan bahwa topik kedua mungkin berisi ulasan tentang cokelat, dll. Demikian pula, topik ketiga mungkin lagi berisi ulasan tentang soda atau jus. Anda dapat melihat bahwa ada beberapa kata umum di semua kategori. Ini karena ada beberapa kata yang digunakan untuk hampir semua topik. Misalnya "bagus", "hebat", "suka" dll.</p>
+<p>Sebagai langkah terakhir, kami akan menambahkan kolom ke bingkai data asli yang akan menyimpan topik untuk teks. Untuk melakukannya, kita dapat menggunakan `LDA.transform() metode dan menyebarkan matriks istilah dokumen kita. Metode ini akan menetapkan probabilitas semua topik untuk setiap dokumen. Perhatikan kode berikut:</p>
+<div class="codehilite"><pre><span></span><code>topic_values = LDA.transform(doc_term_matrix)
+topic_values.shape
+</code></pre></div>
+
+<p>Pada output, Anda akan melihat (20000, 5) yang berarti bahwa setiap dokumen memiliki 5 kolom di mana setiap kolom sesuai dengan nilai probabilitas topik tertentu. Untuk menemukan indeks topik dengan nilai maksimum, kita dapat memanggil `argmax() metode dan melewatkan 1 sebagai nilai untuk parameter sumbu.</p>
+<p>Skrip berikut menambahkan kolom baru untuk topik dalam bingkai data dan menetapkan nilai topik ke setiap baris dalam kolom:</p>
+<div class="codehilite"><pre><span></span><code>reviews_datasets[&#39;Topic&#39;] = topic_values.argmax(axis=1)
+</code></pre></div>
+
+<p>Sekarang mari kita lihat bagaimana kumpulan data terlihat:</p>
+<div class="codehilite"><pre><span></span><code>reviews_datasets.head()
+</code></pre></div>
+
+<p>Keluaran:</p>
+<p><img alt="" src="C:\Users\Semprul 93\Pictures\python-nlp-topic-modeling-23.png" /></p>
+<p>Anda dapat melihat kolom baru untuk topik di output.</p>
+<p>Referensi :</p>
+<ol>
+<li>https://stackabuse.com/python-for-nlp-topic-modeling</li>
+</ol>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../CRAWLING/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Sebelumnya
+                </span>
+                Crawl
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../PREPOCESSING/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Selanjutnya
+                </span>
+                Prepocessing
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Hasyim
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Salin ke memori", "clipboard.copied": "Tersalin ke memori", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Cari", "search.result.placeholder": "Ketik untuk mulai pencarian", "search.result.none": "Tidak ada dokumen yang sesuai", "search.result.one": "1 dokumen ditemukan", "search.result.other": "# dokumen ditemukan", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

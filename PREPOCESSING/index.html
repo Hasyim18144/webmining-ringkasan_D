@@ -1,0 +1,445 @@
+
+<!doctype html>
+<html lang="id" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <meta name="author" content="Hasyim">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>Prepocessing - Web Mining</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#e92063">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="pink" data-md-color-accent="red">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prepocessing" class="md-skip">
+          Lewati ke isi
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Web Mining" class="md-header-nav__button md-logo" aria-label="Web Mining">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Web Mining
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Prepocessing
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cari" placeholder="Cari" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/Hasyim18144/webmining-ringkasan_D/" title="Menuju repositori" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webmining-ringkasan_D
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Web Mining" class="md-nav__button md-logo" aria-label="Web Mining">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Web Mining
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Hasyim18144/webmining-ringkasan_D/" title="Menuju repositori" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    webmining-ringkasan_D
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../CRAWLING/" class="md-nav__link">
+      Crawl
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../MODELING/" class="md-nav__link">
+      Modeling
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Prepocessing
+    </a>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Hasyim18144/webmining-ringkasan_D/edit/master/docs/PREPOCESSING.md" title="Ubah halaman ini" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="prepocessing">PREPOCESSING<a class="headerlink" href="#prepocessing" title="Permanent link">&para;</a></h1>
+<p>Prepocessing merupakan salah satu tahapan yang penting untuk data pada proses mining. Data yang digunakan dalam proses mining tidak selamanya dalam kondisi ideal untuk diproses. Terkadang pada data tersebut terdapat berbagai permasalahan yang dapat mengganggu hasil dari proses mining itu sendiri seperti diantaranya adalah missing value, data redundant, outliers, ataupun format data yang tidak sesuai dengan sistem. Oleh karenanya untuk mengatasi permasalahan  tersebut dibutuhkan tahap prepocessing. Prepocessing merupakan salah satu tahapan menghilangkan permasalahan - permasalahan yang dapat mengganggu hasil daripada proses data. Dalam kasus klasifikasi dokumen yang menggunakan data bertipe teks, terdapat beberapa macam proses yang dilakukan umumnya diantaranya case folding, filtering(remove punctuation), stopword removal, stemming, tokenization dan sebagainya.</p>
+<p><strong>Langkah-Langkah Proses Prepocessing</strong></p>
+<ul>
+<li>Data dokumen untuk diproses</li>
+</ul>
+<p><img alt="" src="C:\Users\Semprul 93\Pictures\Data.png" /></p>
+<p>Representasi Data</p>
+<ul>
+<li>Cleaning data dengan menghilangkan tanda baca atau karakter selain teks dengan fungsi punctuation removal.</li>
+</ul>
+<p><img alt="" src="C:\Users\Semprul 93\Pictures\Punctuation.png" /></p>
+<p>Punctuation Removal</p>
+<ul>
+<li>Case Folding yang merupakan proses untuk merubah setiap kata menjadi sama, misal huruf kecil dengan menggunakan fungsi lowercase.</li>
+</ul>
+<p><img alt="" src="C:\Users\Semprul 93\Pictures\Case-Fold.png" /></p>
+<p>Case Fold</p>
+<ul>
+<li>Stopword Removal, menghapus kata-kata yang terlalu umum dan kurang penting ciri-ciri pada kata ini adalah frekwensi kemunculannya yang jumlahnya  cukup banyak dibandingkan dengan kata yang lainnya. Contoh kata : aku, kamu, dengan, yang dan seterusnya.</li>
+</ul>
+<p><img alt="" src="C:\Users\Semprul 93\Pictures\Stopword-Removal.png" /></p>
+<p>Stopword Removal</p>
+<ul>
+<li>Stemming adalah proses untuk mengubah kata pada setiap kalimat ke bentuk dasar atau menghapus kata-kata imbuhan.</li>
+</ul>
+<p><img alt="" src="C:\Users\Semprul 93\Pictures\Stemming.png" /></p>
+<p>Stemming</p>
+<ul>
+<li>Tokenizing merupakan tahap untuk memenggal setiap kata dalam kalimat termasuk kareakter.</li>
+</ul>
+<p><img alt="" src="C:\Users\Semprul 93\Pictures\Tokenizing.png" /></p>
+<p>Tokenizing</p>
+<p>Itulah contoh dari proses prepocessing text, berikutnya data hasil prepocessing  dapat digunakan untuk keperluan proses fitur seleksi, fitur ekstraksi, klasifikasi dan yang lainnya.</p>
+<p><strong>Program Python Prepocessing</strong></p>
+<ul>
+<li>Buat file function.py</li>
+</ul>
+<p>```
+  import re #regular expression
+  import xlwt #library untuk membaca data pada excel
+  from nltk.tokenize import word_tokenize #libray untuk tokenizing
+  #Sastrawi Library untuk Stemming dan Stopword Removal Data Set Bahasa Indonesia
+  from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+  from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory </p>
+<p>factori = StemmerFactory()
+  stemmer = factori.create_stemmer()</p>
+<p>factory = StopWordRemoverFactory()
+  stopword = factory.create_stop_word_remover()</p>
+<p>class hadisClass(object):
+      def <strong>init</strong>(self,hadis,k1,k2,k3):
+          self.hadis = hadis
+          self.k1 = k1
+          self.k2 = k2
+          self.k3 = k3   </p>
+<p>def openFile(wb):<br />
+      hadisContent = []
+      items= []
+      for sheet in wb.sheets():
+          num_row, num_col = sheet.nrows,4
+          for row in range(num_row):
+              values = []
+              for col in range(num_col):
+                  if col == 0:
+                      x = (sheet.cell(row,col).value)
+                  value = (sheet.cell(row,col).value)
+                  values.append(value)
+              hadisContent.append(x)
+              item = hadisClass(*values)
+              items.append(item)
+      return hadisContent, items</p>
+<p>def prepro(datahadis):
+      dhadis=[]
+      for i in datahadis:
+          cleanning = re.sub('[^a-zA-z\s]','', i)                 <br />
+          casefold = cleanning.lower();
+          stopW = stopword.remove(casefold) <br />
+          stemming = stemmer.stem(stopW)                                      <br />
+          tokens = word_tokenize(stemming)                                    <br />
+          dhadis.append(tokens)
+      return dhadis
+  ```</p>
+<ul>
+<li>Masih dalam folder yang sama buat file testRun.py</li>
+</ul>
+<p>```
+  import function as fc
+  from xlrd import open_workbook</p>
+<p>wb = open_workbook('book1.xlsx')
+  data, items = fc.openFile(wb)</p>
+<p>datatest = []
+  for j in data :
+      datatest.append(j)</p>
+<p>datatest = fc.prepro(datatest)
+  print(datatest)
+  ```</p>
+<ul>
+<li>Jika berhasil bentuk ouput data akan seperti dibawah ini.<img alt="" src="C:\Users\Semprul 93\Pictures\zero.png" /></li>
+</ul>
+<p><strong>Referensi</strong></p>
+<ol>
+<li>https://hendroprasetyo.com/apa-itu-preprocessing/#.YMAquvkzbIV</li>
+</ol>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../MODELING/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Sebelumnya
+                </span>
+                Modeling
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Hasyim
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Salin ke memori", "clipboard.copied": "Tersalin ke memori", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Cari", "search.result.placeholder": "Ketik untuk mulai pencarian", "search.result.none": "Tidak ada dokumen yang sesuai", "search.result.one": "1 dokumen ditemukan", "search.result.other": "# dokumen ditemukan", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
